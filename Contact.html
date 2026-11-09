@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Gali Badminton Store</title>
+    <link rel="stylesheet" href="Global.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <a href="Index.html" class="logo">GALI<span> BADMINTON</span></a>
+
+            <nav class="navbar">
+                <a href="Index.html">Home</a>
+                <a href="About.html">About</a>
+                <a href="Shop.html">Shop</a>
+                <a href="Contact.html" class="active">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contact Hero -->
+    <section class="contact-hero">
+        <div class="container">
+            <p class="small-title">GET IN TOUCH</p>
+            <h1>Let's Talk <span>Badminton</span></h1>
+            <p>Have a question about our products? Contact us today.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section container">
+
+        <div class="contact-info">
+            <p class="small-title">CONTACT DETAILS</p>
+            <h2>We Are Here to Help</h2>
+
+            <div class="contact-item">
+                <h3>📞 Phone</h3>
+                <p>+91 XXXXXXXXXX</p>
+            </div>
+
+            <div class="contact-item">
+                <h3>💬 WhatsApp</h3>
+                <p>Chat with us for product enquiries and orders.</p>
+            </div>
+
+            <div class="contact-item">
+                <h3>📍 Location</h3>
+                <p>Add your shop address here.</p>
+            </div>
+
+            <a class="btn"
+               href="https://wa.me/91XXXXXXXXXX?text=Hello%20Gali%20Badminton%20Store">
+                Message Us on WhatsApp
+            </a>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form">
+            <h2>Send Us a Message</h2>
+
+            <form onsubmit="sendMessage(event)">
+                <input type="text" id="name" placeholder="Your Name" required>
+
+                <input type="email" id="email" placeholder="Your Email" required>
+
+                <input type="tel" id="phone" placeholder="Your Phone Number" required>
+
+                <textarea id="message" rows="5"
+                    placeholder="Write your message..." required></textarea>
+
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <h2>GALI BADMINTON STORE</h2>
+            <p>Your game. Your passion. Our equipment.</p>
+            <p>© 2026 Gali Badminton Store. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function sendMessage(event) {
+            event.preventDefault();
+
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const phone = document.getElementById("phone").value;
+            const message = document.getElementById("message").value;
+
+            const whatsappNumber = "91XXXXXXXXXX";
+
+            const text =
+                "Hello Gali Badminton Store!%0A" +
+                "Name: " + encodeURIComponent(name) + "%0A" +
+                "Email: " + encodeURIComponent(email) + "%0A" +
+                "Phone: " + encodeURIComponent(phone) + "%0A" +
+                "Message: " + encodeURIComponent(message);
+
+            window.open(
+                "https://wa.me/" + whatsappNumber + "?text=" + text,
+                "_blank"
+            );
+        }
+    </script>
+
+</body>
+</html>
+
